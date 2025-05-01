@@ -1,0 +1,12 @@
+
+Validation Metrics:
+Accuracy: 0.9672
+Precision: 0.9690
+Recall: 0.9653
+F1-score: 0.9672
+
+Test Metrics:
+Accuracy: 0.9664
+Precision: 0.9694
+Recall: 0.9634
+F1-score: 0.9664
