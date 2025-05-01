@@ -46,7 +46,13 @@ pip install -r requirements.txt
 python train.py
 ```
 
-### 3. Predict gender from a name
+### 3. Predict gender from a name using script
+Run interactive inference with:
+```bash
+python inference.py
+```
+
+### 4. Predict gender from a name using Python code
 ```python
 from joblib import load
 
