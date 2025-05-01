@@ -1,12 +1,13 @@
 # RwandaNameGenderModel
 
-**RwandaNameGenderModel** is a machine learning model that predicts gender based solely on Rwandan first names. It uses a character-level n-gram approach with a logistic regression classifier to provide fast, interpretable, and highly accurate predictions — achieving **96%+ accuracy** on both validation and test sets.
+**RwandaNameGenderModel** is a machine learning model that predicts gender based on Rwandan names — whether a **first name**, **surname**, or **both in any order**. It uses a character-level n-gram approach with a logistic regression classifier to provide fast, interpretable, and highly accurate predictions — achieving **96%+ accuracy** on both validation and test sets.
 
 ---
 
 ## 🧠 Model Overview
 
 - **Type:** Classic ML (Logistic Regression)
+- **Input:** Rwandan name (flexible: single or full name)
 - **Vectorization:** Character-level n-grams (2–3 chars)
 - **Framework:** scikit-learn
 - **Training Set:** 66,735 names (out of 83,419)
@@ -56,7 +57,11 @@ def predict_gender(name):
     X = vectorizer.transform([name])
     return model.predict(X)[0]
 
-predict_gender("Mugisha")  # Output: "male" or "female"
+# Flexible input: first name, surname, or both (any order)
+predict_gender("Gabriel")                 # Output: "male"
+predict_gender("Baziramwabo")             # Output: "male"
+predict_gender("Baziramwabo Gabriel")     # Output: "male"
+predict_gender("Gabriel Baziramwabo")     # Output: "male"
 ```
 
 ---
@@ -102,4 +107,3 @@ We welcome improvements and multilingual extensions. Fork this repo, improve, an
 ## 🔗 Links
 
 - [Benax Technologies](https://benax.rw)
-
