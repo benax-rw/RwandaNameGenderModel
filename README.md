@@ -4,7 +4,7 @@
 
 ---
 
-## 🧠 Model Overview
+## 🧠 Summary
 
 - **Type:** Classic ML (Logistic Regression)
 - **Input:** Rwandan name (flexible: single or full name)
